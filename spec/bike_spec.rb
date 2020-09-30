@@ -5,9 +5,8 @@ describe Bike do
 
     describe '#report_broken' do
         it 'is changes working to false' do
-            bike = Bike.new
-            bike.report_broken
-            expect(bike.working?).to eq false
+            subject.report_broken
+            expect(subject).to be_broken
         end 
     end 
 end
