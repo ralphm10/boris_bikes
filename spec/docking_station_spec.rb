@@ -25,13 +25,12 @@ describe DockingStation do
     end 
 
     describe '#dock' do
+        let(:bike) { Bike.new }
         it 'docks something' do
-            bike = Bike.new
             subject.dock(bike)
             expect(subject.bikes.length).to eq 1
         end 
         it 'returns docked bikes' do
-            bike = Bike.new
             expect(subject.dock(bike)).to eq subject.bikes
         end 
         it 'raises an error if full' do
