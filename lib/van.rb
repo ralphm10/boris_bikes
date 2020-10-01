@@ -1,4 +1,5 @@
 require_relative 'bike'
+require_relative 'docking_station'
 
 class Van
 
@@ -8,10 +9,11 @@ class Van
         @capacity = capacity
         @bikes = []
     end 
-    def collect_broken_bike(bike)
+    def collect_broken_bike(bike, docking_station)
         raise 'bike is working' unless bike.broken? 
         raise 'van full' if bikes.length >= capacity
-
+        raise 'no bikes available' if docking_station.bikes.empty?
+        docking_station.bikes.pop
         @bikes.push(bike)
     end         
 end
