@@ -1,14 +1,14 @@
 class Bike
-
     def working?
         true
-    end 
+    end
+
     def report_broken
         @broken = true
-    end 
+    end
 
     def broken?
         @broken
     end 
-end 
+end
 
