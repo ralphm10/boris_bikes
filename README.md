@@ -1,3 +1,3 @@
 ## Boris Bikes
 
-A simple Boris Bikes (or Santander Cyles) simulator built in Ruby
+A simple Boris Bikes (or Santander Cyles) simulator which runs in the command line and is built in Ruby
